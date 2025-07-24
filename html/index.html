@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048-המשחק</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <h1 class="title-2048">
+        <span class="num num-2">2</span>
+        <span class="num num-0">0</span>
+        <span class="num num-4">4</span>
+        <span class="num num-8">8</span>
+    </h1>
+    <div class="label-instroc">
+        <button class="toggle-btn" onclick="toggleInstructions()">הצג/הסתר הוראות</button>
+        <div class="instructions" id="instructions">
+            <h2>איך משחקים:</h2>
+            <p>
+                2048 הוא משחק לוח בו מופיעות משבצות עם מספרים.<br>
+                בעזרת חיצי המקלדת אתם מזיזים את המשבצות על גבי הלוח.<br>
+                כל פעם שתזיזו את המשבצות, משבצת חדשה תופיע.<br>
+                משבצות זהות מתמזגות לערך כפול. המטרה – להגיע ל־2048!
+            </p>
+        </div>
+    </div>
+    <div class="newgame"><a href="index.html" class="label">משחק חדש</a></div>
+    <div class="box">
+        <div class="label">score <span id="mone">0</span></div>
+        <div class="label">best score <span id="best"></span></div>
+    </div>
+    <div class="bigdiv">
+        <div class="tiles-container">
+            <!-- 16 משבצות -->
+            <div class="smalldiv"><div class="tile" data-row="1" data-col="1"></div></div>
+<div class="smalldiv"><div class="tile" data-row="1" data-col="2"></div></div>
+<div class="smalldiv"><div class="tile" data-row="1" data-col="3"></div></div>
+<div class="smalldiv"><div class="tile" data-row="1" data-col="4"></div></div>
+<div class="smalldiv"><div class="tile" data-row="2" data-col="1"></div></div>
+<div class="smalldiv"><div class="tile" data-row="2" data-col="2"></div></div>
+<div class="smalldiv"><div class="tile" data-row="2" data-col="3"></div></div>
+<div class="smalldiv"><div class="tile" data-row="2" data-col="4"></div></div>
+<div class="smalldiv"><div class="tile" data-row="3" data-col="1"></div></div>
+<div class="smalldiv"><div class="tile" data-row="3" data-col="2"></div></div>
+<div class="smalldiv"><div class="tile" data-row="3" data-col="3"></div></div>
+<div class="smalldiv"><div class="tile" data-row="3" data-col="4"></div></div>
+<div class="smalldiv"><div class="tile" data-row="4" data-col="1"></div></div>
+<div class="smalldiv"><div class="tile" data-row="4" data-col="2"></div></div>
+<div class="smalldiv"><div class="tile" data-row="4" data-col="3"></div></div>
+<div class="smalldiv"><div class="tile" data-row="4" data-col="4"></div></div>
+        </div>
+        <div class="game-over-message">
+            <p id="bigfont">game over</p>
+            <a href="index.html">משחק חדש</a>
+        </div>
+        <div class="win_massage">
+            <p id="bigfont">!!!!ניצחת</p>
+            <a href="index.html">משחק חדש</a>
+        </div>
+    </div>
+    <div id="confetti-wrapper"></div>
+    <script src="js/game.js"></script>
+</body>
+</html>
