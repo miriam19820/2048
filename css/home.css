@@ -1,0 +1,165 @@
+
+h1{
+text-align: center;
+font-size: xx-large;
+font-family: 'Courier New', Courier, monospace;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1b0033;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ring {
+    position: relative;
+    width: 37vw;
+    height: 37vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring i {
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    filter: drop-shadow(0 0 20px var("--clr:#ff0057;"));
+
+}
+
+.ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 15s linear infinite;
+    border: 6px solid #e703a3;
+    --clr: #27dd2a;
+}
+
+.ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 50s linear infinite;
+    border: 2px solid #0de137;
+    --clr: #c6178c;
+}
+
+.ring i:nth-child(3) {
+    border-radius: 56% 59% 41% 44% / 38% 62% 63% 37%;
+    animation: animate2 30s linear infinite;
+    border: 2px solid #26ace1;
+    --clr: #0488ac;
+}
+
+.ring:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.getIn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.getIn h2 {
+    font-size: 3vw;
+    color: #fff;
+}
+
+.getIn .inputBx {
+    position: relative;
+}
+
+.getIn .inputBx input {
+    text-align: center;
+    position: relative;
+    width: 20vw;
+    height: 42px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+
+.getIn .inputBx input[type="submit"] {
+    width: 10vw;
+    background: #e02297;
+    height: 30px;
+    background: linear-gradient(45deg, #12e44e, #0fd2d2);
+    border: none;
+    cursor: pointer;
+}
+
+.getIn .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.getIn .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.getIn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+.goIn p {
+    display: inline;
+    color: white;
+}
+
+@media screen and (max-width: 1010px) {
+    .ring {
+        position: relative;
+        width: 90vw;
+        height: 110vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
